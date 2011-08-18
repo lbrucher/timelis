@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Time Sheet Report</title>
+<style>
+body
+{
+	background-color:#ffffff;
+}
+td
+{
+	font-family: arial;
+	font-size:9pt;
+}
+td.header
+{
+  border-bottom:1px solid black;
+  padding:3;
+}
+
+td.footer
+{
+  border-top:1px solid black;
+  padding:3;
+}
+
+td.cellBorderTop
+{
+  border-top:1px solid #777777;
+}
+td.cell
+{
+  padding:3;
+}
+td.cellLeft
+{
+	border-right:1px solid #777777;
+}
+td.cellRight
+{
+	border-left:1px solid #777777;
+}
+td.activity {
+	white-space:nowrap;
+}
+td.description {
+}
+td.time {
+	white-space:nowrap;
+}
+</style>
+</head>
+<body>
+
+<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr valign='middle'>
+	<td align='left' ><img src='logo.jpg'></td>
+	<td align='center' style='font-size:20pt;'>Time Sheet</td>
+	<td align='right'>
+		<table border='0' cellspacing='0' cellpadding='2'>
+		<tr valign='top'>
+			<td align='right'>Contractor:</td>
+			<td align='left'>#CONTRACTOR#</td>
+		</tr>
+		<tr valign='top'>
+			<td align='right'>Period:</td>
+			<td align='left'>#PERIOD#</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+<br>
+<table width='100%' border='0' cellspacing='0' cellpadding='0' style='border:1px solid black;'>
+<tr valign='top' style='background-color:#dddddd;'>
+  <td class='header cellLeft'>Date</td>
+  <td class='header' colspan='3'>Tasks</td>
+  <td class='header cellRight' align='right'>Days</td>
+</tr>
+#CONTENT#
+<tr valign='top' style='background-color:#dddddd;'>
+  <td class='footer cellLeft' valign='middle'>Total</td>
+  <td class='footer' colspan='3'>&nbsp;</td>
+  <td class='footer cellRight' align='right'>#TOTAL#</td>
+</tr>
+</table>
+</body>
+</html>
